@@ -126,3 +126,75 @@ prevArrowEl.addEventListener('click', function () {
 
 
 })
+
+
+const circles=document.querySelector('.circles')
+const circleArray=[]
+circles.innerHTML = ' '
+
+for (let i = 0; i < slides.length; i++) {
+
+   
+    
+
+    // creo p
+    const p = document.createElement('p');
+
+    // do la classe circles__dot a p 
+    p.className = 'circles__dot';
+
+    // assegno alla prima p la classe circle__active 
+    if (i === currentIndex) {
+        p.classList.add('circle__active')
+    }
+
+ 
+
+  
+   
+   
+
+
+    // aggancio il cricle
+    circles.append(p)
+
+    // push nell array di circle
+    circleArray.push(p);
+
+    // console.log(circleArray)
+    // console.log(circles)
+
+
+}
+
+
+
+
+// implementare pulsanti sotto la foto 
+
+// const currentSlide1= document.getElementById("slide1")
+// const currentSlide2= document.getElementById("slide2")
+// const currentSlide3= document.getElementById("slide3")
+// const currentSlide4= document.getElementById("slide4")
+// const currentSlide5= document.getElementById("slide5")
+
+
+// inserire il click 
+
+currentSlide2.addEventListener('click', function () {
+
+      let slideAttiva = slideElements[currentIndex];
+      let slideSuccessiva = slideElements[1]
+
+
+    
+       
+
+   
+        slideAttiva.classList.remove('active');
+        slideSuccessiva.classList.add('active')
+        
+  currentIndex=1
+    
+})
+
