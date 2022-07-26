@@ -103,6 +103,7 @@ for (let i = 0; i < slides.length; i++) {
 
 
 
+
 // implementare freccia destra 
 const nextArrowEl = document.querySelector('.arrow-next');
 // console.log(nextArrowEl)
@@ -189,12 +190,94 @@ prevArrowEl.addEventListener('click', function () {
 
 
 
+// bottone 0 
+const circle0 = document.querySelector('.slide0')
+circle0.addEventListener('click', function () {
+
+    let alternativeIndex=0
+    let slideAttiva = slideElements[currentIndex];
+    let slideSuccessiva = slideElements[alternativeIndex]
+    let circleAttivo = circleArray[currentIndex]
+    let circleSuccessivo = circleArray[alternativeIndex];
+    slideAttiva.classList.remove('active');
+    slideSuccessiva.classList.add('active');
+    circleAttivo.classList.remove('circle__active');
+    circleSuccessivo.classList.add('circle__active');
+    currentIndex = alternativeIndex;
+
+})
 
 
 
+// bottone 1 
+const circle1 = document.querySelector('.slide1')
+circle1.addEventListener('click', function () {
+
+    let alternativeIndex=1
+    let slideAttiva = slideElements[currentIndex];
+    let slideSuccessiva = slideElements[alternativeIndex]
+    let circleAttivo = circleArray[currentIndex]
+    let circleSuccessivo = circleArray[alternativeIndex];
+    slideAttiva.classList.remove('active');
+    slideSuccessiva.classList.add('active');
+    circleAttivo.classList.remove('circle__active');
+    circleSuccessivo.classList.add('circle__active');
+    currentIndex = alternativeIndex;
+
+})
 
 
+// bottone 2 
+const circle2 = document.querySelector('.slide2')
+circle2.addEventListener('click', function () {
 
+    let alternativeIndex=2
+    let slideAttiva = slideElements[currentIndex];
+    let slideSuccessiva = slideElements[alternativeIndex]
+    let circleAttivo = circleArray[currentIndex]
+    let circleSuccessivo = circleArray[alternativeIndex];
+    slideAttiva.classList.remove('active');
+    slideSuccessiva.classList.add('active');
+    circleAttivo.classList.remove('circle__active');
+    circleSuccessivo.classList.add('circle__active');
+    currentIndex = alternativeIndex;
+
+})
+
+
+// bottone 3 
+const circle3 = document.querySelector('.slide3')
+circle3.addEventListener('click', function () {
+
+    let alternativeIndex=3
+    let slideAttiva = slideElements[currentIndex];
+    let slideSuccessiva = slideElements[alternativeIndex]
+    let circleAttivo = circleArray[currentIndex]
+    let circleSuccessivo = circleArray[alternativeIndex];
+    slideAttiva.classList.remove('active');
+    slideSuccessiva.classList.add('active');
+    circleAttivo.classList.remove('circle__active');
+    circleSuccessivo.classList.add('circle__active');
+    currentIndex = alternativeIndex;
+
+})
+
+// bottone 4 
+const circle4 = document.querySelector('.slide4')
+circle4.addEventListener('click', function () {
+
+    let alternativeIndex=4
+    let slideAttiva = slideElements[currentIndex];
+    let slideSuccessiva = slideElements[alternativeIndex]
+    let circleAttivo = circleArray[currentIndex]
+    let circleSuccessivo = circleArray[alternativeIndex];
+    slideAttiva.classList.remove('active');
+    slideSuccessiva.classList.add('active');
+    circleAttivo.classList.remove('circle__active');
+    circleSuccessivo.classList.add('circle__active');
+    currentIndex = alternativeIndex;
+
+})
 
 
 
