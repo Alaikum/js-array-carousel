@@ -56,6 +56,53 @@ for (let i = 0; i < slides.length; i++) {
 }
 // console.log(slideElements)
 
+
+// implementare pulsanti sotto la foto 
+const circles = document.querySelector('.circles')
+const circleArray = []
+circles.innerHTML = ' '
+
+for (let i = 0; i < slides.length; i++) {
+
+
+
+
+    // creo p
+    const p = document.createElement('p');
+
+    // do la classe circles__dot a p 
+    p.className = 'circles__dot';
+    p.classList.add('slide' + i)
+
+
+
+    // assegno alla prima p la classe circle__active 
+    if (i === currentIndex) {
+        p.classList.add('circle__active')
+    }
+
+
+
+
+
+
+
+
+    // aggancio il cricle
+    circles.append(p)
+
+    // push nell array di circle
+    circleArray.push(p);
+
+    // console.log(circleArray)
+    // console.log(circles)
+
+
+}
+
+
+
+
 // implementare freccia destra 
 const nextArrowEl = document.querySelector('.arrow-next');
 // console.log(nextArrowEl)
@@ -66,7 +113,8 @@ nextArrowEl.addEventListener('click', function () {
 
     let slideAttiva = slideElements[currentIndex];
     let slideSuccessiva = slideElements[currentIndex + 1]
-
+    let circleAttivo = circleArray[currentIndex]
+    let circleSuccessivo = circleArray[currentIndex + 1];
 
 
     // qui si torna alla prima img quando siamo arrivati alla fine 
@@ -74,6 +122,9 @@ nextArrowEl.addEventListener('click', function () {
         slideSuccessiva = slideElements[0];
         slideAttiva.classList.remove('active');
         slideSuccessiva.classList.add('active');
+        circleSuccessivo = circleArray[0]
+        circleAttivo.classList.remove('circle__active');
+        circleSuccessivo.classList.add('circle__active');
         currentIndex = -1;
 
 
@@ -81,6 +132,8 @@ nextArrowEl.addEventListener('click', function () {
         // togliere classe active dalla slide attiva 
         slideAttiva.classList.remove('active');
         slideSuccessiva.classList.add('active');
+        circleAttivo.classList.remove('circle__active');
+        circleSuccessivo.classList.add('circle__active');
     }
     currentIndex++
 
@@ -102,6 +155,8 @@ prevArrowEl.addEventListener('click', function () {
 
     let slideAttiva = slideElements[currentIndex];
     let slideSuccessiva = slideElements[currentIndex + -1]
+    let circleAttivo = circleArray[currentIndex]
+    let circleSuccessivo = circleArray[currentIndex + -1];
 
 
 
@@ -110,6 +165,9 @@ prevArrowEl.addEventListener('click', function () {
         slideSuccessiva = slideElements[4];
         slideAttiva.classList.remove('active');
         slideSuccessiva.classList.add('active');
+        circleSuccessivo = circleArray[4]
+        circleAttivo.classList.remove('circle__active');
+        circleSuccessivo.classList.add('circle__active');
         currentIndex = 5;
 
 
@@ -117,6 +175,8 @@ prevArrowEl.addEventListener('click', function () {
         // togliere classe active dalla slide attiva 
         slideAttiva.classList.remove('active');
         slideSuccessiva.classList.add('active');
+        circleAttivo.classList.remove('circle__active');
+        circleSuccessivo.classList.add('circle__active');
     }
     currentIndex--
 
@@ -128,76 +188,13 @@ prevArrowEl.addEventListener('click', function () {
 })
 
 
-const circles=document.querySelector('.circles')
-const circleArray=[]
-circles.innerHTML = ' '
-
-for (let i = 0; i < slides.length; i++) {
-
-   
-    
-
-    // creo p
-    const p = document.createElement('p');
-
-    // do la classe circles__dot a p 
-    p.className = 'circles__dot';
-    p.classList.add('slide'+i)
-    
-    
-
-    // assegno alla prima p la classe circle__active 
-    if (i === currentIndex) {
-        p.classList.add('circle__active')
-    }
-
- 
-
-  
-   
-   
-
-
-    // aggancio il cricle
-    circles.append(p)
-
-    // push nell array di circle
-    circleArray.push(p);
-
-    // console.log(circleArray)
-    // console.log(circles)
-
-
-}
 
 
 
 
-// implementare pulsanti sotto la foto 
-
-// const currentSlide1= document.getElementById("slide1")
-// const currentSlide2= document.getElementById("slide2")
-// const currentSlide3= document.getElementById("slide3")
-// const currentSlide4= document.getElementById("slide4")
-// const currentSlide5= document.getElementById("slide5")
 
 
-// inserire il click 
-
-// currentSlide2.addEventListener('click', function () {
-
-//       let slideAttiva = slideElements[currentIndex];
-//       let slideSuccessiva = slideElements[1]
 
 
-    
-       
 
-   
-//         slideAttiva.classList.remove('active');
-//         slideSuccessiva.classList.add('active')
-        
-//   currentIndex=1
-    
-// })
 
