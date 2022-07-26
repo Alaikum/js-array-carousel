@@ -58,10 +58,10 @@ for (let i = 0; i < slides.length; i++) {
 
 // implementare freccia destra 
 const nextArrowEl = document.querySelector('.arrow-next');
-console.log(nextArrowEl)
+// console.log(nextArrowEl)
 
 
-// cambio  active alla slide 
+// cambio  active alla slide  destra
 nextArrowEl.addEventListener('click', function () {
 
     let slideAttiva = slideElements[currentIndex];
@@ -83,6 +83,42 @@ nextArrowEl.addEventListener('click', function () {
         slideSuccessiva.classList.add('active');
     }
     currentIndex++
+
+    // console.log(slideAttiva, 'attiva')
+    // console.log(slideSuccessiva, 'successiva')
+    // console.log(currentIndex)
+
+
+})
+
+
+// implementare freccia sinistra 
+const prevArrowEl = document.querySelector('.arrow-prev');
+// console.log(prevArrowEl)
+
+
+// cambio  active alla slide  destra
+prevArrowEl.addEventListener('click', function () {
+
+    let slideAttiva = slideElements[currentIndex];
+    let slideSuccessiva = slideElements[currentIndex + -1]
+
+
+
+    // qui si torna alla prima img quando siamo arrivati alla fine 
+    if (currentIndex === 0) {
+        slideSuccessiva = slideElements[4];
+        slideAttiva.classList.remove('active');
+        slideSuccessiva.classList.add('active');
+        currentIndex = 5;
+
+
+    } else {
+        // togliere classe active dalla slide attiva 
+        slideAttiva.classList.remove('active');
+        slideSuccessiva.classList.add('active');
+    }
+    currentIndex--
 
     console.log(slideAttiva, 'attiva')
     console.log(slideSuccessiva, 'successiva')
