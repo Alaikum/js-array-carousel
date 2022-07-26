@@ -142,6 +142,9 @@ for (let i = 0; i < slides.length; i++) {
 
     // do la classe circles__dot a p 
     p.className = 'circles__dot';
+    p.classList.add('slide'+i)
+    
+    
 
     // assegno alla prima p la classe circle__active 
     if (i === currentIndex) {
@@ -181,20 +184,20 @@ for (let i = 0; i < slides.length; i++) {
 
 // inserire il click 
 
-currentSlide2.addEventListener('click', function () {
+// currentSlide2.addEventListener('click', function () {
 
-      let slideAttiva = slideElements[currentIndex];
-      let slideSuccessiva = slideElements[1]
+//       let slideAttiva = slideElements[currentIndex];
+//       let slideSuccessiva = slideElements[1]
 
 
     
        
 
    
-        slideAttiva.classList.remove('active');
-        slideSuccessiva.classList.add('active')
+//         slideAttiva.classList.remove('active');
+//         slideSuccessiva.classList.add('active')
         
-  currentIndex=1
+//   currentIndex=1
     
-})
+// })
 
